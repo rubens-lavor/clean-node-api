@@ -10,7 +10,7 @@ describe('SignUpValidation Factory', () => {
     makeSignUpValidation()
 
     const validations: Validation[] = []
-    for (const field of ['name', 'email', 'password', 'passwordConfimation']) {
+    for (const field of ['name', 'email', 'password', 'passwordConfirmation']) {
       validations.push(new RequiredFieldValidation(field))
     }
 
