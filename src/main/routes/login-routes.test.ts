@@ -50,5 +50,15 @@ describe('Login Routes', () => {
         })
         .expect(200)
     })
+
+    test('Shold return 401 on login', async () => {
+      await request(app)
+        .post('/api/login')
+        .send({
+          email: 'haryon07@gmail.com',
+          password: '123'
+        })
+        .expect(401)
+    })
   })
 })
